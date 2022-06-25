@@ -1,0 +1,10 @@
+.navbar {
+    background: linear-gradient(0deg,rgba(210,10,70,.85),rgba(138,21,56,.85));
+    color: white;
+}
+
+.appTitleLink {
+    text-decoration: 'none';
+    text-decoration-line: none;
+    color: white;
+}
