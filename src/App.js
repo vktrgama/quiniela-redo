@@ -6,11 +6,12 @@ import {
 } from "react-router-dom";
 import Header from './Components/Header';
 import Home from './Components/Home';
-import Footer from './Components/Footer'
-import Navbar from './Components/Navbar'
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
           <BrowserRouter>
@@ -21,9 +22,7 @@ function App() {
                 <Route path="/rules" element={<div>this are the rules</div>} />
                 <Route path="/matches" element={<div>this are the matches</div>} />
                 <Route path="/participants" element={<div>this are the partricipants</div>}/>
-                <Route exact path="/signin" render={() => (
-                      <h3>This are the signin</h3>
-                )} />
+                <Route exact path="/signin" element={<div>this are the login</div>} />
                 <Route path="*" element={<div>nopage</div>} />
           </Routes>
           <Footer />
