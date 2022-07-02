@@ -6,10 +6,10 @@ function Home() {
     return <div className='home'>
         <div className="hero">
             <Stack direction='row' spacing={2} justifyContent='center' alignItems='center' divider={<Divider orientation='vertical' flexItem />}>
-                <div className='comnatiner-left'>
+                <div className='container-left'>
                     <h1>Welcome to Quiniela Qatar 2022</h1>
                 </div>
-                <div className='comnatiner-right'>List of participants here</div>
+                <div className='container-right'>List of participants here</div>
             </Stack>
         </div>
         <div>more content</div>
