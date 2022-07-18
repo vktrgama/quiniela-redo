@@ -9,41 +9,27 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu'
 import { Link } from "react-router-dom";
+import { useApp } from '../../contexts/App';
 import './sidenavbar.css'
 
 function SideNavbar() {
     const [openDrawer, setOpenDrawer] = useState(false);
+    const { appState } = useApp();
 
   return (
     <>
       <Drawer open={openDrawer}  onClose={() => setOpenDrawer(false)}>
-        <List>
-        <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-                <Button component={Link} to="/" color='inherit'>Home</Button>
-            </ListItemText>
-          </ListItem>
-         <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-                <Button component={Link} to="/rules" color='inherit'>Rules</Button>
-            </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-                <Button component={Link} to="/matches" color='inherit'>Matches</Button>
-            </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-                <Button component={Link} to="/participants" color='inherit'>Participants</Button>
-            </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-                <Button component={Link} to="/signin" color='inherit'>Sign-in/Login</Button>
-            </ListItemText>
-          </ListItem>
-        </List>
+      <List>
+          {appState.navigation.map((nav, idx) => (
+              <ListItem key={idx} onClick={() => setOpenDrawer(false)}>
+                  <ListItemText>
+                      <Button component={Link} to={nav.path} color='inherit'>
+                          {nav.title}
+                      </Button>
+                  </ListItemText>
+              </ListItem>
+          ))}
+      </List>
       </Drawer>
       <IconButton className='menuIcon' onClick={() => setOpenDrawer(!openDrawer)} edge='start' color='inherit' aria-label='menu'>
         <MenuIcon />
