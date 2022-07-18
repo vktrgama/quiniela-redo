@@ -1,0 +1,6 @@
+config/
+amplify/
+data/
+dist/
+build/
+node_modules/

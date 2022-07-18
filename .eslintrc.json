@@ -1,0 +1,43 @@
+{
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "warnOnUnsupportedTypeScriptVersion": false
+    },
+    "plugins": [
+      "react-hooks",
+      "promise"
+    ],
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "react/display-name": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types": "off",
+      "no-console": "error",
+      "arrow-parens": 0,
+      "no-underscore-dangle": 0,
+      "no-use-before-define": "error",
+      "no-plusplus": 0,
+      "no-minusminus": 0,
+      "no-unused-expressions": 0,
+      "react/no-danger": 0,
+      "react/self-closing-comp": 0,
+      "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+      "no-return-await": 0,
+      "max-params": ["error", 5],
+      "max-depth": ["error", 3],
+      "promise/always-return": "error",
+      "promise/catch-or-return": "error"
+    },
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
+    },
+    "root": true
+  }
